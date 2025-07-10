@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Very-Dark-Desaturated-Blue: #48556a;
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+main {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 10px;
+  box-shadow: 0 2.5rem 2.5rem -0.625rem rgba(201, 213, 225, 0.503415);
+}
+
+.drawers {
+  width: 285px;
+  height: 280px; 
+  overflow: hidden;
+}
+
+.drawers img {
+  width: 350px; 
+  height: 280px;
+  border-radius: 10px 0 0 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 445px;
+  height: 280px;
+  border-radius: 0 10px 10px 0;
+  background-color: white;
+}
+
+h1 {
+  margin: 32px 41px 0 40px;
+  font-size: 20.2px;
+  line-height: 1.39;
+  transform-origin: left; 
+  transform: scaleX(1.014);
+  color: var(--Very-Dark-Desaturated-Blue);
+}
+
+p {
+  margin: 13px 45px 0 40px;
+  font-size: 12.6px;
+  font-weight: 500;
+  line-height: 1.6;
+  transform-origin: left; 
+  transform: scaleX(1.051);
+  color: var(--Desaturated-Dark-Blue);
+}
+
+.author-info {
+  display: flex;
+  margin-top: 18px;
+}
+
+#avatar-michelle {
+  width: 40px;
+  height: 40px;
+  margin: 1px 16px 0 40px;
+  border-radius: 50%;
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column; 
+  font-size: 12.7px;
+  font-weight: 500;
+  transform-origin: left; 
+  transform: scaleX(1.037);
+  color: var(--Grayish-Blue);
+}
+
+.text-info span {
+  margin: 2px 0 2px;
+  font-weight: 700;
+  color: var(--Very-Dark-Desaturated-Blue);
+}
+
+.share {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 32px;
+  height: 32px;
+  margin: 5px 0 0 166px;
+  padding: 0 0 1px 2px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--Light-Grayish-Blue);
+  cursor: pointer;
+  user-select: none;
+}
+
+#icon-share {
+  width: 15px; 
+  height: 13px; 
+}
+
+#icon-share.white {
+  filter: invert(100%) brightness(200%) contrast(1000%);
+}
+
+#share-icons {
+  position:absolute;
+  top: 46.1%;
+  left: 75.3%;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  color: var(--Grayish-Blue);
+  box-shadow: 0 0.625rem 0.625rem 0 rgba(201, 213, 225, 0.5);
+  border-radius: 10px;
+  width: 248px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16.4px;
+  padding-top: 4px;
+
+}
+
+.triangle {
+  position: absolute;
+  top: 100%;
+  left: 45.4%;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid var(--Very-Dark-Desaturated-Blue);
+  box-shadow: 0 0.500rem 0.590rem 0 rgba(201, 213, 225, 0.3);
+  background-color: #ebeff4;
+  margin: 0 0; 
+}
+
+#share-icons span {
+  letter-spacing: 5.2px; 
+  font-size: 12.63px;
+  padding-bottom: 2px;
+  margin-left: 2.5px;
+}
+
+#share-icons #icon-twitter {
+  margin-top: 2px;
+}
+
+.icon-style {
+  margin-top: 1px;
+}
+
+.share.active {
+  background-color: var(--Desaturated-Dark-Blue);
+}
+
+.share:focus-visible {
+  outline: 2px solid var(--Desaturated-Dark-Blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 875px) {
+  main {
+    flex-direction: column;  
+    align-items: center;   
+  }
+  
+  .drawers {
+    width: 327px;      
+    height: 200px;        
+    overflow: hidden;
+  }
+  
+  .drawers img {
+    width: 100%;           
+    height: 230px;
+    border-radius: 10px 10px 0 0; 
+    object-fit: cover;     
+  }
+  
+  .content {
+    border-radius: 0 0 10px 10px; 
+    width: 327px;
+    height: 312px;   
+
+  }
+  
+  h1 {
+    margin: 36px 41px 0 32px;
+    font-size: 16.2px;
+    line-height: 1.49;
+    transform-origin: left; 
+    transform: scaleX(1.011);
+  }
+
+  p {
+    margin: 13px 47px 0 32px;
+    line-height: 1.59;
+  }
+
+  .author-info {
+    margin-top: 30px;
+  }
+
+  .text-info span{
+    margin: 1px 0 2px;
+  }
+  
+
+  #avatar-michelle {
+    margin: 0 16px 0 32px;
+  }
+
+  .share {
+    margin: 4px 0 0 166px;
+    z-index: 1; 
+  }
+
+  #icon-share {
+    margin-right: 1px;
+  }
+
+  #share-icons {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    border-radius: 0 0 10px 10px;
+    justify-content: flex-start; 
+    padding-left: 32px;         
+    gap: 16px;                   
+  }
+  
+  #share-icons span {
+    letter-spacing: 5.33px;
+    margin-left: 0;
+    margin-right: 1px;
+    padding-bottom: 3px;
+  }
+
+  #share-icons #icon-twitter {
+    margin-top: 0px;
+  }
+
+  .icon-style {
+    margin-top: 0px;
+  }
+
+  .triangle {
+    display: none;
+  }
+  
+}
